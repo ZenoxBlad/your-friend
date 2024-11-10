@@ -1,0 +1,88 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Basic layout */
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+/* Navigation links */
+nav {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3498db;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2980b9;
+}
+
+/* Featured Destinations */
+section {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.featured-destination {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.featured-destination img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.featured-destination p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* 3D Canvas Container */
+#threejs-canvas {
+    width: 100%;
+    height: 500px;
+    margin: 30px auto;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #888;
+}

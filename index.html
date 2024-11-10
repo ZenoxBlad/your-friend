@@ -1,157 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore travel destinations, tips, and guides for your next adventure.">
-    <meta name="keywords" content="travel, destinations, adventure, vacation, tips">
-    <meta name="author" content="Your Name">
-    <title>ExploreWorld - Discover Your Next Adventure</title>
+    <title>TravelExplorer</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-
 <body>
-
-    <!-- Header Section (Navigation) -->
     <header>
-        <div class="logo">
-            <h1>ExploreWorld</h1>
-        </div>
+        <h1>TravelExplorer</h1>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Travel Tips</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero Section (3D Background and Call-to-Action) -->
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <h1>Discover Your Next Adventure</h1>
-            <p>Explore top destinations, adventure tips, and travel insights.</p>
-            <a href="#destinations" class="cta-button">Start Exploring</a>
-        </div>
-        <div id="hero-background">
-            <canvas id="threejs-canvas"></canvas> <!-- 3D Canvas for Three.js Effects -->
-        </div>
-    </section>
+    <main>
+        <section>
+            <h2>Discover the World</h2>
+            <p>Your journey begins here. Explore breathtaking destinations, hidden gems, and travel tips.</p>
+            <a href="#">Explore Destinations</a>
+        </section>
 
-    <!-- Destinations Section (Featured Destinations) -->
-    <section id="destinations" class="destinations">
-        <h2>Top Travel Destinations</h2>
-        <div class="destination-cards">
-            <div class="destination-card">
-                <div class="front">
-                    <img src="paris.jpg" alt="Paris">
+        <section>
+            <h2>Featured Destinations</h2>
+            <div class="featured-destination">
+                <img src="paris.jpg" alt="Paris">
+                <div>
                     <h3>Paris</h3>
-                    <p>The City of Lights</p>
-                </div>
-                <div class="back">
-                    <p>Explore the Eiffel Tower, the Louvre, and much more.</p>
+                    <p>The City of Lights. Romance, culture, and history await.</p>
                 </div>
             </div>
-            <div class="destination-card">
-                <div class="front">
-                    <img src="bali.jpg" alt="Bali">
+            <div class="featured-destination">
+                <img src="bali.jpg" alt="Bali">
+                <div>
                     <h3>Bali</h3>
-                    <p>Island Paradise</p>
-                </div>
-                <div class="back">
-                    <p>Experience Bali’s serene beaches and temples.</p>
+                    <p>Beautiful beaches, vibrant culture, and serene landscapes.</p>
                 </div>
             </div>
-            <div class="destination-card">
-                <div class="front">
-                    <img src="tokyo.jpg" alt="Tokyo">
+            <div class="featured-destination">
+                <img src="tokyo.jpg" alt="Tokyo">
+                <div>
                     <h3>Tokyo</h3>
-                    <p>Where Tradition Meets Innovation</p>
-                </div>
-                <div class="back">
-                    <p>Discover Japan’s cultural and modern marvels.</p>
+                    <p>High-tech city, sushi, temples, and gardens.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog Section (Latest Articles) -->
-    <section id="blog" class="blog">
-        <h2>Latest Travel Articles</h2>
-        <div class="blog-posts">
-            <div class="post">
-                <img src="budget_travel.jpg" alt="Budget Travel Tips">
-                <h3>Traveling on a Budget</h3>
-                <p>Find the best budget-friendly destinations for 2024!</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="post">
-                <img src="solo_travel.jpg" alt="Solo Travel Tips">
-                <h3>Solo Travel: A Beginner’s Guide</h3>
-                <p>How to travel solo safely and make the most of your adventure.</p>
-                <a href="#">Read More</a>
-            </div>
-        </div>
-    </section>
+        <!-- 3D Canvas Section -->
+        <section id="threejs-canvas"></section>
+    </main>
 
-    <!-- Contact Section (Contact Form) -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>We’d love to hear from you! Drop us a message with your inquiries.</p>
-        <form action="/submit-form" method="POST">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
     <footer>
-        <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-        </div>
-        <div class="ads">
-            <p>Ads Here</p> <!-- Space for Google AdSense or Affiliate Ads -->
-        </div>
+        <p>&copy; 2024 TravelExplorer. All rights reserved.</p>
     </footer>
 
-    <script>
-        // 3D Scene using Three.js
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("threejs-canvas") });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
-
-        camera.position.z = 5;
-
-        function animate() {
-            requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-
-        animate();
-    </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
