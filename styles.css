@@ -1,88 +1,69 @@
-/* Reset some basic styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Basic layout */
 body {
-    background-color: #f0f4f8;
-    color: #333;
-    padding: 20px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #111;
+    color: #fff;
 }
 
-/* Header styling */
 header {
     text-align: center;
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 2.5em;
-    color: #2c3e50;
-}
-
-/* Navigation links */
-nav {
-    margin-bottom: 20px;
-    text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 nav a {
-    text-decoration: none;
-    color: #3498db;
     margin: 0 15px;
-    font-weight: bold;
+    text-decoration: none;
+    color: #5bc0de;
 }
 
-nav a:hover {
-    color: #2980b9;
-}
-
-/* Featured Destinations */
-section {
-    margin-top: 30px;
-}
-
-h2 {
-    font-size: 1.8em;
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-
-.featured-destination {
-    display: flex;
-    align-items: center;
-    margin: 15px 0;
-}
-
-.featured-destination img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-    border-radius: 10px;
-}
-
-.featured-destination p {
-    font-size: 1.1em;
-    color: #555;
-}
-
-/* 3D Canvas Container */
-#threejs-canvas {
-    width: 100%;
-    height: 500px;
-    margin: 30px auto;
-    border: 2px solid #3498db;
-    border-radius: 10px;
-}
-
-/* Footer */
-footer {
-    margin-top: 50px;
+#content {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    font-size: 0.9em;
-    color: #888;
+    margin-top: 50px;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.popup {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+    z-index: 3;
+    transition: opacity 0.3s;
+}
+
+.popup.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#destinationPopup h3 {
+    margin-top: 0;
+}
+
+#adSpace {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    z-index: 3;
 }

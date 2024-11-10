@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelExplorer</title>
+    <title>TravelExplorer - Discover the World in 3D</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,45 +18,26 @@
         </nav>
     </header>
 
-    <main>
-        <section>
+    <div id="content">
+        <section class="intro">
             <h2>Discover the World</h2>
             <p>Your journey begins here. Explore breathtaking destinations, hidden gems, and travel tips.</p>
-            <a href="#">Explore Destinations</a>
         </section>
+    </div>
 
-        <section>
-            <h2>Featured Destinations</h2>
-            <div class="featured-destination">
-                <img src="paris.jpg" alt="Paris">
-                <div>
-                    <h3>Paris</h3>
-                    <p>The City of Lights. Romance, culture, and history await.</p>
-                </div>
-            </div>
-            <div class="featured-destination">
-                <img src="bali.jpg" alt="Bali">
-                <div>
-                    <h3>Bali</h3>
-                    <p>Beautiful beaches, vibrant culture, and serene landscapes.</p>
-                </div>
-            </div>
-            <div class="featured-destination">
-                <img src="tokyo.jpg" alt="Tokyo">
-                <div>
-                    <h3>Tokyo</h3>
-                    <p>High-tech city, sushi, temples, and gardens.</p>
-                </div>
-            </div>
-        </section>
+    <canvas id="globeCanvas"></canvas>
 
-        <!-- 3D Canvas Section -->
-        <section id="threejs-canvas"></section>
-    </main>
+    <div id="destinationPopup" class="popup hidden">
+        <h3 id="popupTitle"></h3>
+        <p id="popupDescription"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 TravelExplorer. All rights reserved.</p>
-    </footer>
+    <div id="adSpace">
+        <!-- Place for ads -->
+        <h3>Sponsored Ads</h3>
+        <p>Your ad could be here!</p>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
