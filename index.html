@@ -1,119 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta Tags for SEO -->
-    <meta name="description" content="Discover the best travel destinations, tips, and guides for all kinds of travelers. Explore Paris, Bali, Tokyo, and more!">
-    <meta name="keywords" content="travel, travel blog, adventure, tourism, vacation, budget travel, luxury travel, family travel, explore, travel tips">
-    <meta name="author" content="TravelExplorer Team">
-    
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="TravelExplorer | Your Adventure Awaits">
-    <meta property="og:description" content="Discover the best travel destinations, tips, and guides for all kinds of travelers.">
-    <meta property="og:image" content="path-to-your-image.jpg">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card Meta Tags for Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TravelExplorer | Your Adventure Awaits">
-    <meta name="twitter:description" content="Explore amazing travel destinations with us.">
-    <meta name="twitter:image" content="path-to-your-image.jpg">
-    
-    <title>TravelExplorer | Your Adventure Awaits</title>
+    <meta name="description" content="Explore travel destinations, tips, and guides for your next adventure.">
+    <meta name="keywords" content="travel, destinations, adventure, vacation, tips">
+    <meta name="author" content="Your Name">
+    <title>ExploreWorld - Discover Your Next Adventure</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
+
 <body>
-    <!-- Navigation -->
+
+    <!-- Header Section (Navigation) -->
     <header>
+        <div class="logo">
+            <h1>ExploreWorld</h1>
+        </div>
         <nav>
-            <div class="logo">
-                <h1>TravelExplorer</h1>
-            </div>
-            <ul class="nav-links">
+            <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#tips">Travel Tips</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Discover the World</h1>
-            <p>Your journey begins here. Explore breathtaking destinations, hidden gems, and travel tips.</p>
-            <a href="#destinations" class="cta-button">Explore Destinations</a>
+    <!-- Hero Section (3D Background and Call-to-Action) -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Explore top destinations, adventure tips, and travel insights.</p>
+            <a href="#destinations" class="cta-button">Start Exploring</a>
+        </div>
+        <div id="hero-background">
+            <canvas id="threejs-canvas"></canvas> <!-- 3D Canvas for Three.js Effects -->
         </div>
     </section>
 
-    <!-- Featured Destinations -->
+    <!-- Destinations Section (Featured Destinations) -->
     <section id="destinations" class="destinations">
-        <h2>Featured Destinations</h2>
+        <h2>Top Travel Destinations</h2>
         <div class="destination-cards">
             <div class="destination-card">
-                <img src="destination1.jpg" alt="Paris">
-                <h3>Paris</h3>
-                <p>The City of Lights. Romance, culture, and history await.</p>
+                <div class="front">
+                    <img src="paris.jpg" alt="Paris">
+                    <h3>Paris</h3>
+                    <p>The City of Lights</p>
+                </div>
+                <div class="back">
+                    <p>Explore the Eiffel Tower, the Louvre, and much more.</p>
+                </div>
             </div>
             <div class="destination-card">
-                <img src="destination2.jpg" alt="Bali">
-                <h3>Bali</h3>
-                <p>Beautiful beaches, vibrant culture, and serene landscapes.</p>
+                <div class="front">
+                    <img src="bali.jpg" alt="Bali">
+                    <h3>Bali</h3>
+                    <p>Island Paradise</p>
+                </div>
+                <div class="back">
+                    <p>Experience Bali’s serene beaches and temples.</p>
+                </div>
             </div>
             <div class="destination-card">
-                <img src="destination3.jpg" alt="Tokyo">
-                <h3>Tokyo</h3>
-                <p>High-tech city, sushi, temples, and gardens.</p>
+                <div class="front">
+                    <img src="tokyo.jpg" alt="Tokyo">
+                    <h3>Tokyo</h3>
+                    <p>Where Tradition Meets Innovation</p>
+                </div>
+                <div class="back">
+                    <p>Discover Japan’s cultural and modern marvels.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Travel Tips -->
-    <section id="tips" class="travel-tips">
-        <h2>Top Travel Tips</h2>
-        <ul>
-            <li>How to travel on a budget</li>
-            <li>How to stay safe while traveling solo</li>
-            <li>Pack like a pro: Essentials for every traveler</li>
-        </ul>
-    </section>
-
-    <!-- Blog Section -->
+    <!-- Blog Section (Latest Articles) -->
     <section id="blog" class="blog">
-        <h2>Latest Articles</h2>
+        <h2>Latest Travel Articles</h2>
         <div class="blog-posts">
             <div class="post">
-                <img src="blog1.jpg" alt="Blog Post 1">
-                <h3>10 Tips for Traveling Solo</h3>
-                <p>Discover how to stay safe, enjoy yourself, and make the most of your solo adventures.</p>
+                <img src="budget_travel.jpg" alt="Budget Travel Tips">
+                <h3>Traveling on a Budget</h3>
+                <p>Find the best budget-friendly destinations for 2024!</p>
+                <a href="#">Read More</a>
             </div>
             <div class="post">
-                <img src="blog2.jpg" alt="Blog Post 2">
-                <h3>The Best Budget Destinations of 2024</h3>
-                <p>Explore the most affordable places to visit without breaking the bank.</p>
+                <img src="solo_travel.jpg" alt="Solo Travel Tips">
+                <h3>Solo Travel: A Beginner’s Guide</h3>
+                <p>How to travel solo safely and make the most of your adventure.</p>
+                <a href="#">Read More</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Contact Section (Contact Form) -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Drop us a message with your inquiries.</p>
+        <form action="/submit-form" method="POST">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 TravelExplorer. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-            </div>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <div class="ads">
+            <p>Ads Here</p> <!-- Space for Google AdSense or Affiliate Ads -->
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="scripts.js"></script>
+    <script>
+        // 3D Scene using Three.js
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("threejs-canvas") });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
+
 </body>
+
 </html>
